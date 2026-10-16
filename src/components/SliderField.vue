@@ -31,7 +31,7 @@ function handleInput(event: Event): void {
       :step="step"
       :value="modelValue"
       :disabled="disabled"
-      class="mt-2 h-1.5 w-full cursor-pointer appearance-none rounded-full bg-neutral-700 accent-indigo-500 disabled:cursor-not-allowed disabled:opacity-40"
+      class="mt-2 h-2 w-full cursor-pointer appearance-none rounded-full bg-neutral-700 accent-indigo-500 disabled:cursor-not-allowed disabled:opacity-40"
       @input="handleInput"
     />
   </label>

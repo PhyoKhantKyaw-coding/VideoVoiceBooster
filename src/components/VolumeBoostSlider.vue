@@ -25,7 +25,7 @@ function handleInput(event: Event): void {
 
 <template>
   <section
-    class="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-5 sm:p-6"
+    class="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 sm:p-6"
     aria-labelledby="boost-heading"
   >
     <div class="flex items-baseline justify-between gap-3">
@@ -38,7 +38,7 @@ function handleInput(event: Event): void {
         </p>
       </div>
       <div class="text-right">
-        <span class="block text-2xl font-semibold tabular-nums text-indigo-400">
+        <span class="block text-xl font-semibold tabular-nums text-indigo-400 sm:text-2xl">
           {{ modelValue }}%
         </span>
         <span class="block text-xs tabular-nums text-neutral-400">{{ dbLabel }}</span>
@@ -55,10 +55,10 @@ function handleInput(event: Event): void {
         :value="modelValue"
         :disabled="disabled"
         :aria-valuetext="`${modelValue} percent, ${dbLabel}`"
-        class="h-2 w-full cursor-pointer appearance-none rounded-full bg-neutral-700 accent-indigo-500 disabled:cursor-not-allowed disabled:opacity-50"
+        class="h-2.5 w-full cursor-pointer appearance-none rounded-full bg-neutral-700 accent-indigo-500 disabled:cursor-not-allowed disabled:opacity-50"
         @input="handleInput"
       />
-      <div class="mt-2 flex justify-between text-[11px] tabular-nums text-neutral-500">
+      <div class="mt-2 flex justify-between text-[10px] tabular-nums text-neutral-500 sm:text-[11px]">
         <span>100%</span>
         <span>500%</span>
         <span>1000%</span>

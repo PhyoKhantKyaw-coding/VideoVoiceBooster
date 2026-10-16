@@ -105,7 +105,7 @@ function handleDragLeave(): void {
         <video
           :key="listenMode"
           :src="activeUrl"
-          class="mx-auto block max-h-[60vh] w-full bg-black"
+          class="mx-auto block max-h-[50vh] w-full bg-black sm:max-h-[60vh]"
           controls
           playsinline
           preload="metadata"
@@ -130,7 +130,7 @@ function handleDragLeave(): void {
       <div class="bg-black">
         <video
           :src="video.url"
-          class="mx-auto block max-h-[60vh] w-full bg-black"
+          class="mx-auto block max-h-[50vh] w-full bg-black sm:max-h-[60vh]"
           controls
           playsinline
           preload="metadata"
@@ -151,11 +151,11 @@ function handleDragLeave(): void {
           </p>
         </div>
 
-        <div class="flex shrink-0 items-center gap-2">
+        <div class="flex w-full items-center gap-2 sm:w-auto sm:shrink-0">
           <button
             type="button"
             :disabled="disabled"
-            class="rounded-lg border border-neutral-700 px-3 py-2 text-sm font-medium text-neutral-200 transition-colors hover:border-neutral-500 hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex-1 rounded-lg border border-neutral-700 px-3 py-2.5 text-sm font-medium text-neutral-200 transition-colors hover:border-neutral-500 hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 disabled:cursor-not-allowed disabled:opacity-50 sm:flex-none"
             @click="openPicker"
           >
             Replace video
@@ -163,7 +163,7 @@ function handleDragLeave(): void {
           <button
             type="button"
             :disabled="disabled"
-            class="rounded-lg border border-transparent px-3 py-2 text-sm font-medium text-neutral-400 transition-colors hover:text-red-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex-1 rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium text-neutral-400 transition-colors hover:text-red-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 disabled:cursor-not-allowed disabled:opacity-50 sm:flex-none"
             @click="emit('remove')"
           >
             Remove
@@ -184,7 +184,7 @@ function handleDragLeave(): void {
       @drop.prevent="handleDrop"
     >
       <span
-        class="flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed px-6 py-14 transition-colors"
+        class="flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed px-4 py-12 transition-colors sm:px-6 sm:py-14"
         :class="
           isDragging
             ? 'border-indigo-400 bg-indigo-500/10'

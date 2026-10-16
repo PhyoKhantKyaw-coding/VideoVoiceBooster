@@ -32,9 +32,15 @@ const {
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col bg-neutral-950 text-neutral-100">
-    <header class="sticky top-0 z-10 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur">
-      <div class="mx-auto flex max-w-3xl items-center gap-3 px-4 py-4 sm:px-6">
+  <div
+    class="flex min-h-dvh flex-col bg-neutral-950 text-neutral-100"
+    style="padding-bottom: env(safe-area-inset-bottom)"
+  >
+    <header
+      class="sticky top-0 z-10 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur"
+      style="padding-top: env(safe-area-inset-top)"
+    >
+      <div class="mx-auto flex max-w-3xl items-center gap-3 px-4 py-3 sm:px-6 sm:py-4">
         <span
           class="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-500/15 text-indigo-400 ring-1 ring-indigo-500/30"
         >
@@ -54,14 +60,18 @@ const {
             <path d="M18.5 5.5a9 9 0 0 1 0 13" />
           </svg>
         </span>
-        <div>
-          <h1 class="text-lg font-semibold tracking-tight sm:text-xl">Video Voice Booster</h1>
-          <p class="text-xs text-neutral-500">Upload, boost, export &mdash; all in your browser</p>
+        <div class="min-w-0">
+          <h1 class="truncate text-base font-semibold tracking-tight sm:text-xl">
+            Video Voice Booster
+          </h1>
+          <p class="truncate text-xs text-neutral-500">
+            Upload, boost, export &mdash; all in your browser
+          </p>
         </div>
       </div>
     </header>
 
-    <main class="mx-auto w-full max-w-3xl flex-1 space-y-6 px-4 py-8 sm:px-6 sm:py-10">
+    <main class="mx-auto w-full max-w-3xl flex-1 space-y-5 px-4 py-6 sm:space-y-6 sm:px-6 sm:py-10">
       <VideoStage
         :video="video"
         :result="result"

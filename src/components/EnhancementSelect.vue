@@ -67,14 +67,14 @@ function select(value: EnhancementMode): void {
 
 <template>
   <section
-    class="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-5 sm:p-6"
+    class="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 sm:p-6"
     aria-labelledby="enhance-heading"
   >
-    <div class="flex items-baseline justify-between gap-3">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
       <h2 id="enhance-heading" class="text-base font-semibold text-neutral-100">
         Voice enhancement
       </h2>
-      <span class="text-xs text-neutral-500">How the boost is applied</span>
+      <span class="hidden text-xs text-neutral-500 sm:block">How the boost is applied</span>
     </div>
 
     <div

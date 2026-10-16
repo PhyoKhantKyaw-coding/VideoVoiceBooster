@@ -31,10 +31,10 @@ const barStyle = computed(() => ({ width: `${Math.min(100, Math.max(0, props.pro
 <template>
   <section
     v-if="status !== 'idle'"
-    class="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-5 sm:p-6"
+    class="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 sm:p-6"
     aria-live="polite"
   >
-    <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
       <p
         class="text-sm"
         :class="status === 'error' ? 'text-red-300' : 'text-neutral-300'"

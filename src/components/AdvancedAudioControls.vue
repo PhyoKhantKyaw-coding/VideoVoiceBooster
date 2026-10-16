@@ -36,7 +36,7 @@ function signed(value: number, unit = ' dB'): string {
 
 <template>
   <section
-    class="space-y-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-5 sm:p-6"
+    class="space-y-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 sm:p-6"
     aria-labelledby="custom-heading"
   >
     <div>
@@ -222,7 +222,7 @@ function signed(value: number, unit = ' dB'): string {
             step="0.5"
             :value="modelValue.fadeIn"
             :disabled="disabled"
-            class="mt-2 w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-sm text-neutral-100 focus:border-indigo-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-40"
+            class="mt-2 w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-base text-neutral-100 focus:border-indigo-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-40 sm:text-sm"
             @input="onFade('fadeIn', $event)"
           />
         </label>
@@ -235,7 +235,7 @@ function signed(value: number, unit = ' dB'): string {
             step="0.5"
             :value="modelValue.fadeOut"
             :disabled="disabled"
-            class="mt-2 w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-sm text-neutral-100 focus:border-indigo-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-40"
+            class="mt-2 w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-base text-neutral-100 focus:border-indigo-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-40 sm:text-sm"
             @input="onFade('fadeOut', $event)"
           />
         </label>
